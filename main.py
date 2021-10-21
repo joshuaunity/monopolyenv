@@ -12,7 +12,7 @@ class Property:
         self.value = value
         self.isproperty = isproperty
 
-
+# Creating every laning square on the board as an object
 Go = Property("Go", 0, 100, 1)
 Old_kent = Property("Old_kent", 1, 600, 20)
 First_community_chest = Property("First_community_chest", 2, 100, 1)
@@ -54,6 +54,7 @@ Parklane = Property("Parklane", 37, 3500, 350)
 Supertax = Property("Supertax", 38, 0, 1000)
 Mayfair = Property("Mayfair", 39, 4000, 500)
 
+# Storing every poroperty in an array
 properties = [Go, Old_kent, First_community_chest, White_chapel, Income_Tax, King_cross_station, The_angel_islington,
               First_chance, Euston, Pentoville, Just_visiting, Pall_mall, Electric_company, White_hall, Northhumber,
               Maryleborne_station, Bow_street, Second_community_chest, Marlborough_street, Vine_street, Free_parking,
@@ -66,9 +67,10 @@ initial_position = random.randint(2, 12)
 header = ['Property Name', 'Visits', 'Values Accumulated',
           'Trial Number', 'Position Number']
 rows = []
+# this variable determines how many times you want the dice to be throwm
 rolls = 100_000
 
-# for player in range(6):
+# loop to run the game enviroment bye the amount specified in "rolls" variable above
 while i <= rolls:
     for property in properties:
         if property.position == initial_position:
